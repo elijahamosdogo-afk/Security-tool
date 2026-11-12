@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phishing Link Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav>
+    <a href="phishing.html" aria-current="page">Link analyzer</a>
+    <a href="password.html">Password checker</a>
+  </nav>
+  <h1>Phishing link analyzer</h1>
+  <p class="sub">Paste a link to see the warning signs before you click it.</p>
+
+  <section class="card">
+    <label for="url" class="note">Link to check</label>
+    <input id="url" type="text" inputmode="url" autocomplete="off" autocapitalize="off" placeholder="http://paypal-login.verify-account.xyz/update">
+    <button id="check">Analyze link</button>
+    <button id="clear" class="alt">Clear</button>
+  </section>
+
+  <section id="result" class="card" hidden aria-live="polite">
+    <p id="verdict" class="verdict"></p>
+    <div class="meter"><i id="bar"></i></div>
+    <ul id="flags"></ul>
+  </section>
+
+  <p class="note">This tool spots common patterns only. A clean result doesn’t prove a link is safe. Nothing you paste leaves your device.</p>
+</main>
+<script src="phishing.js"></script>
+</body>
+</html>
